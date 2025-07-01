@@ -16,7 +16,9 @@
   },
   "scripts": {
     "start": "tsx ./src/index.ts",
-    "dev": "npx tsc && node dist/index.js"
+    "dev": "npx tsc && node dist/index.js",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate"
   },
   "repository": {
     "type": "git",
