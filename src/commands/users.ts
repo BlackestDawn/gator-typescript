@@ -31,15 +31,6 @@ export async function handlerRegister(cmdName: string, ...args: string[]): Promi
   console.log(newUser);
 }
 
-export async function handlerReset(cmdName: string, ...args: string[]): Promise<void> {
-  const result = await resetUsers();
-  if (result) {
-    console.log("Users table reset.");
-  } else {
-    throw new Error("Failed to reset users table.");
-  }
-}
-
 export async function handlerListUsers(cmdName: string, ...args: string[]): Promise<void> {
   const users = await getAllUsers();
   const config = readConfig();

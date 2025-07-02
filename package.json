@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@types/node": "^24.0.8",
+    "drizzle-kit": "^0.31.4",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },
@@ -9,8 +10,11 @@
   "description": "Boor.dev guided project for a Blog aggregator - Typescript version",
   "main": "index.js",
   "dependencies": {
+    "drizzle-orm": "^0.44.2",
     "esbuild": "^0.25.5",
+    "fast-xml-parser": "^5.2.5",
     "get-tsconfig": "^4.10.1",
+    "postgres": "^3.4.7",
     "resolve-pkg-maps": "^1.0.0",
     "undici-types": "^7.8.0"
   },
