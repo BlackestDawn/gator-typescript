@@ -1,5 +1,6 @@
-import { setUser, readConfig } from "../config";
-import { getUserByName, createUser, resetUsers, getAllUsers } from "../lib/db/queries/users";
+import { User } from "src/lib/db/schema";
+import { setUser } from "../config";
+import { getUserByName, createUser, getAllUsers } from "../lib/db/queries/users";
 
 
 export async function handlerLogin(cmdName: string, ...args: string[]): Promise<void> {
@@ -31,11 +32,10 @@ export async function handlerRegister(cmdName: string, ...args: string[]): Promi
   console.log(newUser);
 }
 
-export async function handlerListUsers(cmdName: string, ...args: string[]): Promise<void> {
+export async function handlerListUsers(cmdName: string, user: User, ...args: string[]): Promise<void> {
   const users = await getAllUsers();
-  const config = readConfig();
   console.log("Users:");
-  for (const user of users) {
-    console.log(` * ${user.name}${user.name === config.currentUserName ? " (current)" : ""}`);
+  for (const u of users) {
+    console.log(` * ${u.name}${u.name === user.name ? " (current)" : ""}`);
   }
 }

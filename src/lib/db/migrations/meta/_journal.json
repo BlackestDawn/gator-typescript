@@ -15,6 +15,13 @@
       "when": 1751400117564,
       "tag": "0001_charming_chimera",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1751434781310,
+      "tag": "0002_kind_human_cannonball",
+      "breakpoints": true
     }
   ]
 }
